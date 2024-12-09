@@ -14,6 +14,6 @@ public class launchbrowser {
 	@AfterMethod()
 	public void TearDown()
 	{
-		
+		System.out.println("after teardown");
 	}
 }
