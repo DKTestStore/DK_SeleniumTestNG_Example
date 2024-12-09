@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.selenium.test.ListenerImp"/>
+	</listeners>
+<parameter name="a" value="5"/>  
+<parameter name="b" value="3"/>  
+  <test name="Test">
+    <classes>
+      <class name="com.selenium.test.TestngDemo"/>
+      <class name="com.selenium.calc.addparam"/>
+      <class name="com.selenium.calc.subtractparam"/>
+      <class name="com.selenium.calc.multipleparam"/>
+    </classes>
+  </test>
+  
+  <parameter name="apple" value="Apple"/>
+  <test name="Fruits">
+	  <classes>
+		  <class name="com.selenium.fruits.fruits"/>
+	  </classes>
+ </test>
+  
+<test name="groupsexample">
+	 <groups>
+		 <run>
+			 <include name="Browser Group"/>
+		 </run>
+	 </groups>
+	 <classes>
+		 <class name="com.selenium.test.GroupExample"/>
+	 </classes>
+ </test>
+ 
+<test name="RegExample">
+	<classes>
+		<class name="com.selenium.test.RegExample">
+			<methods>
+				<exclude name="Door.*"/>
+			</methods>
+			</class>
+	</classes> 
+  </test> 
+  
+  <test name="FlightBookingTest"> 
+	  <classes>
+		  <class name="com.selenium.priority.FlightBookingTest"/>
+	  </classes>	  
+  </test>
+</suite>
+

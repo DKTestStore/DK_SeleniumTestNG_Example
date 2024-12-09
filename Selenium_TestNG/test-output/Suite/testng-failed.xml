@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="a" value="5"/>
+  <parameter name="b" value="3"/>
+  <parameter name="fruit" value="apple"/>
+  <listeners>
+    <listener class-name="com.selenium.test.ListenerImp"/>
+  </listeners>
+  <test thread-count="5" name="Fruits(failed)">
+    <classes>
+      <class name="com.selenium.fruits.fruits">
+        <methods>
+          <include name="addApple"/>
+        </methods>
+      </class> <!-- com.selenium.fruits.fruits -->
+    </classes>
+  </test> <!-- Fruits(failed) -->
+</suite> <!-- Failed suite [Suite] -->
